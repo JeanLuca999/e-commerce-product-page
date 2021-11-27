@@ -8,8 +8,13 @@ export const CartIcon = styled.img`
 `
 
 export const CartWrapper = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-left: auto;
   cursor: pointer;
+
+  @media screen and (min-width:800px) {
+    width: 50px;
+    height: 50px;
+  }
 `

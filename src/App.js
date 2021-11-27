@@ -6,6 +6,9 @@ function App() {
     <>
     <GlobalStyle />
     <Header />
+    <main>
+      
+    </main>
     </>
   )
 }

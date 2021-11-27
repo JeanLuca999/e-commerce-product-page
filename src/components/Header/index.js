@@ -1,13 +1,22 @@
+import { useState } from "react"
 import Avatar from "../Avatar"
 import Cart from "../Cart"
+import MenuMobile from "../MenuMobile"
 import { HeaderWrapper, Li, Link, Nav, Ul, LogoText } from "./style"
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  function toggleMenu() {
+    setMenuOpen(prev => !prev)
+  }
+
   return (
     <HeaderWrapper>
       <Nav>
+        <MenuMobile toggleMenu={toggleMenu}/>
         <LogoText>sneakers</LogoText>
-        <Ul>
+        <Ul visible={menuOpen}>
           <Li>
             <Link>Collections</Link>
           </Li>
