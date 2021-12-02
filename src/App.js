@@ -3,8 +3,12 @@ import { GlobalStyle } from "./components/GlobalStyle";
 import Header from "./components/Header";
 
 import sneaker from './assets/sneaker02.jpg'
+import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
+
+  const [count, setCount] = useState(0)
   return (
     <>
     <GlobalStyle />
@@ -26,8 +30,8 @@ function App() {
               <PriceText>$125.00</PriceText>
               <DiscountText>$250.00</DiscountText>
             </PriceContainer>
+            <Counter count={count} setCount={setCount}/>
           </ContentWrapper>
-
         </GridContainer>
       </Wrapper>
     </main>
