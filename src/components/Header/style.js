@@ -45,6 +45,7 @@ export const Ul = styled.ul`
   align-items: center;
   transition-timing-function: ease;
   transition-duration: 0.4s;
+  z-index: 6;
 
   @media screen and (min-width: 800px) {
     margin-left: 2.5rem;

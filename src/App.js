@@ -1,25 +1,39 @@
-import { GridContainer, Img, ImgWrapper, Wrapper, ContentWrapper, SneakerTitle, ProductTitle, ProductText, PriceContainer, PriceText, DiscountText, ButtonContainer } from "./components/UI/style";
+import { Main, GridContainer, Img, ImgWrapper, Wrapper, ContentWrapper, SneakerTitle, ProductTitle, ProductText, PriceContainer, PriceText, DiscountText, ButtonContainer } from "./components/UI/style";
 import { GlobalStyle } from "./components/GlobalStyle";
 import Header from "./components/Header";
 
-import sneaker from './assets/sneaker02.jpg'
 import Counter from "./components/Counter";
 import { useState } from "react";
 import AddButton from "./components/AddButton";
+import SelectImage from "./components/SelectImage";
+
+import sneaker01 from './assets/sneaker01.jpg'
+import sneaker02 from './assets/sneaker02.jpg'
+import sneaker03 from './assets/sneaker03.jpg' 
 
 function App() {
 
   const [count, setCount] = useState(0)
+  const [currentImg, setCurrentImg] = useState(sneaker01)
+
+  function changeImage(img) {
+    setCurrentImg(img)
+  }
+
+
   return (
     <>
     <GlobalStyle />
     <Header />
-    <main>
+    <Main>
       <Wrapper>
         <GridContainer>
 
           <ImgWrapper>
-            <Img alt="sneaker" src={sneaker}></Img>
+          
+            <Img alt="sneaker" src={currentImg}></Img>
+            <SelectImage changeImage={changeImage} img01={sneaker01} img02={sneaker02} img03={sneaker03}/>
+
           </ImgWrapper>
 
           <ContentWrapper>
@@ -40,7 +54,7 @@ function App() {
           </ContentWrapper>
         </GridContainer>
       </Wrapper>
-    </main>
+    </Main>
     </>
   )
 }
