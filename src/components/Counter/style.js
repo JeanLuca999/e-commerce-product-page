@@ -6,9 +6,15 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   background-color: #f7f7f7;
   height: 50px;
-  width: 90%;
-  max-width: 200px;
+  width: 100%;
+  max-width: 500px;
   border-radius: 5px;
+  margin-top: 1rem;
+  margin-right: 10px;
+
+  @media screen and (min-width:800px) {
+    max-width: 200px;
+  }
 `
 
 export const Button = styled.button `

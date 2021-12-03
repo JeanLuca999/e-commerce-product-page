@@ -1,10 +1,11 @@
-import { GridContainer, Img, ImgWrapper, Wrapper, ContentWrapper, SneakerTitle, ProductTitle, ProductText, PriceContainer, PriceText, DiscountText } from "./components/UI/style";
+import { GridContainer, Img, ImgWrapper, Wrapper, ContentWrapper, SneakerTitle, ProductTitle, ProductText, PriceContainer, PriceText, DiscountText, ButtonContainer } from "./components/UI/style";
 import { GlobalStyle } from "./components/GlobalStyle";
 import Header from "./components/Header";
 
 import sneaker from './assets/sneaker02.jpg'
 import Counter from "./components/Counter";
 import { useState } from "react";
+import AddButton from "./components/AddButton";
 
 function App() {
 
@@ -30,7 +31,12 @@ function App() {
               <PriceText>$125.00</PriceText>
               <DiscountText>$250.00</DiscountText>
             </PriceContainer>
-            <Counter count={count} setCount={setCount}/>
+
+            <ButtonContainer>
+              <Counter count={count} setCount={setCount}/>
+              <AddButton />
+            </ButtonContainer>
+
           </ContentWrapper>
         </GridContainer>
       </Wrapper>

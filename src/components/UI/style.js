@@ -118,3 +118,15 @@ export const DiscountText = styled.span`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 `
+
+export const ButtonContainer = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  justify-content: center;
+
+  @media screen and (min-width:800px) {
+    justify-content: space-between;
+  }
+`
