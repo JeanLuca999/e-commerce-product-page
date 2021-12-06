@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main `
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 2rem;
 `
 
 export const Wrapper = styled.div`
@@ -28,21 +29,27 @@ export const GridContainer = styled.div`
 `
 
 export const ImgWrapper = styled.div`
+  position: relative;
   width: 100%;
   text-align: center;
 
   @media screen and (min-width: 500px) {
-    padding-right: 1rem;
+    padding: 0 1rem;
   }
 `
 
 export const Img = styled.img`
   object-fit: cover;
   object-position: center;
-  width: 90%;
+  width: 100%;
   height: 70%;
   border-radius: 5%;
   max-width: 500px;
+
+  @media screen and (max-width:800px) {
+    max-width: initial;
+    height: 85%;
+  }
 `
 
 export const ContentWrapper = styled.div `

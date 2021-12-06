@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   margin-top: 1.5rem;
   width: 100%;
   justify-content: space-evenly;
+
+  @media screen and (max-width:800px) {
+    display: none;
+  }
 `
 
 export const ImageIcon = styled.div`

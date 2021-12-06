@@ -10,6 +10,7 @@ import SelectImage from "./components/SelectImage";
 import sneaker01 from './assets/sneaker01.jpg'
 import sneaker02 from './assets/sneaker02.jpg'
 import sneaker03 from './assets/sneaker03.jpg' 
+import MobileSelectImage from "./components/MobileSelectImage";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           
             <Img alt="sneaker" src={currentImg}></Img>
             <SelectImage changeImage={changeImage} img01={sneaker01} img02={sneaker02} img03={sneaker03}/>
+            <MobileSelectImage setCurrentImg={setCurrentImg} currentImg={currentImg} array={[sneaker01,sneaker02,sneaker03]}/>
 
           </ImgWrapper>
 
