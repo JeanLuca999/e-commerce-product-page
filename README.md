@@ -8,7 +8,8 @@ O site consiste em uma página de produto em um e-commerce fictício.
 * Styled-components
 
 ## 💽 Como Iniciar o Projeto
-utilize o comando `npm start`
+para baixar as dependências utilize `npm install` <br>
+utilize o comando `npm start` para inicializar.
 
 ## 💻 Preview do Projeto
 
